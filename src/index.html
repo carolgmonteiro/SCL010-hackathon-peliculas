@@ -1,39 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ViewNOW!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Peliculas estelares</title>
-</head>
-<body>
-        <!-- cabeza de pagina -->
-        <header class = "header">
-            <nav>
-            <div class = "logo"></div>
-            <div><input type="search"></div>
-            </nav>
-            </header>
-            <!-- pagina home -->
-            <main>
-                <!-- imagene de pelicula destaque -->
-                <div class = "imageMovie"></div>
-                <!-- barra de filtros -->
-                <div class = "barra de filtros">
-                    <nav>
-                            <div><select name="slctOrder" id= "slctFilterOrder" class="search-box"></select></div>
-                            <div><select name="slctCategory" id=""></select> </div> 
-                            <div><select name="slctYear" id=""></select></div> 
-                    </nav>
-                </div>
-                <!-- las galeria de peliculas -->
-                <div class="movieGallery"></div>
-            </main>
-            <!-- pie de pagina -->
-            <footer>
-                <div><p>Copyrights</p></div>
-                <div>iconos de las redes</div>
-            </footer>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700&display=swap" rel="stylesheet">  
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script src="https://kit.fontawesome.com/3e7b4a9a03.js"></script>
+  </head>
+  <body>
+    <!--Start Header-->
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html"><img src="images/viewnow-logo.png" alt="Viewnow!-Logo"></a>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="current">Inicio</a>
+          <a href="https://pokemongolive.com/es/" target="_blank">Noticias</a>
+          <a href="#">Contacto</a>
+        </div>
+      </nav>
+    </header>
+    <!--End Header-->
+    <!--Start Main-->
+    <main>
+      <section>
+        <div class="main-bg">
+            <div class="intro">
+              <h1>Don´t you know what movie to watch today? All the movie stars are here! </h1>
+              <h2>The most recognized Academy films suggested to you according to your day!</h2>
+              <button id="start-btn"> Start</button>
+          </div>
+        </div>
+      </section>
+      <!--Opciones -->
+      <section class="options-web">
+          <!--Buscar-->
+          <div class="search">
+            <label>Busca por nombre o número</label>
+          <div class="search-box">
+            <span class="icon"></span><i class="fa fa-search"></i>
+            <input type="text" id="searchPokemon" placeholder="Search By name"/>
+            <button id="search-btn"> search </button>
+          </div>
+        </div>
+       <!-- Ordenar Por -->
+          <div class = "sort">
+          <div class="sortby-box">
+            <label>Ordenar por:</label>
+            <select name="Order" id="sort-Pokemon">
+              <option disabled selected value> Ordenar por:</option>
+              <option id="name-up" value="A-Z">A-Z</option>
+              <option id="name-down" value="Z-A">Z-A</option>
+          </select>
+          </div>
+          <!--Filtrar Genero-->
+          <div class="type-filter">
+            <label>Filtrar por tipo:</label>
+            <select name="filter" id="type">
+              <option disabled selected value>Filtro por Tipo:</option>
+              <option value="Water">Agua</option>
+              <option value="Bug">Bicho-Insecto</option>
+              <option value="Dragon">Dragón</option>
+              <option value="Electric">Eléctrico</option>
+              <option value="Ghost">Fantasma</option>
+              <option value="Fire">Fuego</option>
+              <option value="Ice">Hielo</option>
+              <option value="Fighting">Lucha</option>
+              <option value="Normal">Normal</option>
+              <option value="Grass">Planta </option>
+              <option value="Psychic">Psíquico</option>
+              <option value="Rock">Roca</option>
+              <option value="Ground">Tierra</option>
+              <option value="Poison">Veneno</option>
+              <option value="Flying">Volador</option>
+            </select>
+          </div>
+            <!--filtar director -->
+          <div class="value-box">
+              <label>Filtrar por Huevo:</label>
+              <select name="filter" id="egg">
+                <option disabled selected value> Filtro por Huevos </option>
+                <option value="2 km">2 kms</option>
+                <option value="5 km">5 kms </option>
+                <option value="10 km">10 kms</option>
+                <option value="Not in Eggs">No aparece en huevos </option>
+              </select>      
+          </div>
+        </div>
+      </section>
+      <!--Pokemon Cards-->
+      <section id="pokemon-porcent"></section>
+      <section id="cards-container"></section>
+    </main>
+    <!--End Main-->
+
+    <!--Start Footer-->
+    <footer class="footer-content">
+        <div class="info-box">
+            <div class="logo">
+              <a href="index.html"><img src="images/viewnow-logo.png" alt="Viewnow!-Logo"></a>
+            </div>
+            <div class="footer-info">
+              <p>&copy; Copyright viewNOW! 2019 / Design and Development by
+              <a href="https://github.com/carolgmonteiro" target="blank_">Carolina Guido </a> <a href="https://github.com/AlejandraMoralesB" target="blank_">Alejandra Morales</a> & <a href="https://github.com/ClaudiaQuezadaRiquelme" target="blank_">Claudia Quezada</a></p>
+              <div class="social-icons">
+                <a href="index.html"><img src="images/facebook-icon.png"></a>
+                <a href="index.html"><img src="images/instagram-icon.png"></a>
+              </div>
+            </div>
+        </div>
+        <div class="subscribe">
+          <p>Suscríbete a nuestras novedades</p>
+          <input type="email" placeholder="Ingresa tu email">
+          <button id="subscribe-btn">Suscríbete</button>
+        </div>  
+          <button onclick="topFunction()" id="back-to-top" title="Go to top"> <i class="fas fa-arrow-up"></i></button>
+    </footer>
+    <!--End Footer-->
+      <div id="root"></div>
+    <script src="./data/pokemon/pokemon.js"></script>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+    <script src="modal.js"></script>
+  </body>
 </html>
