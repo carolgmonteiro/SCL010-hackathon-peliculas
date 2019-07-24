@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>ViewNOW!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700&display=swap" rel="stylesheet">  
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <script src="https://kit.fontawesome.com/3e7b4a9a03.js"></script>
   </head>
   <body>
     <!--Start Header-->
@@ -17,9 +15,9 @@
           <a href="index.html"><img src="images/viewnow-logo.png" alt="Viewnow!-Logo"></a>
         </div>
         <div class="nav-links">
-          <a href="index.html" class="current">Inicio</a>
-          <a href="https://pokemongolive.com/es/" target="_blank">Noticias</a>
-          <a href="#">Contacto</a>
+          <a href="index.html" class="current">Start</a>
+          <a href="https://www.imdb.com/" target="_blank">News</a>
+          <a href="#">Contact</a>
         </div>
       </nav>
     </header>
@@ -27,11 +25,31 @@
     <!--Start Main-->
     <main>
       <section>
-        <div class="main-bg">
+        <div id="home" class="main-bg" style="display: block">
             <div class="intro">
               <h1>Don´t you know what movie to watch today? All the movie stars are here! </h1>
               <h2>The most recognized Academy films suggested to you according to your day!</h2>
-              <button id="start-btn"> Start</button>
+              <button id="start-btn">Start</button>
+          </div>
+        </div>
+        <div id="feeling" style="display: none" class="questions-bg">
+          <!--Input user feelings-->
+          <div><h1>What´s your mood today?</h1></div>
+          <button id="curious-btn" class="option-btn" value="">Curious</button>
+          <button id="happy-btn" class="option-btn">Happy</button>
+          <button id="sad-btn" class="option-btn">Sad</button>
+        </div>
+        <div id="time" style="display: none" class="questions-bg">
+          <!--Input user time-->
+          <div class="questionTitle"><h1>What about your time?</h1></div>
+          <button id="hurry-btn" class="option-btn">In a hurry</button>
+          <button id="ok-btn" class="option-btn">OK</button>
+          <button id="relaxed-btn" class="option-btn">Relaxed</button>
+        </div>
+        <!--Movie Cards-->
+        <div id="cardsSuggestions" style="display: none" class="questions-bg">
+            <h1>We suggest you...</h1>
+        <div id="cardsSuggestions">
           </div>
         </div>
       </section>
@@ -39,64 +57,49 @@
       <section class="options-web">
           <!--Buscar-->
           <div class="search">
-            <label>Busca por nombre o número</label>
+            <label>Search by name:</label>
           <div class="search-box">
             <span class="icon"></span><i class="fa fa-search"></i>
-            <input type="text" id="searchPokemon" placeholder="Search By name"/>
+            <input type="text" id="searchMovie" placeholder="Search By name"/>
             <button id="search-btn"> search </button>
           </div>
         </div>
        <!-- Ordenar Por -->
           <div class = "sort">
           <div class="sortby-box">
-            <label>Ordenar por:</label>
+            <label>Order by:</label>
             <select name="Order" id="sort-Pokemon">
-              <option disabled selected value> Ordenar por:</option>
+              <option disabled selected value>Order by:</option>
               <option id="name-up" value="A-Z">A-Z</option>
               <option id="name-down" value="Z-A">Z-A</option>
           </select>
           </div>
           <!--Filtrar Genero-->
           <div class="type-filter">
-            <label>Filtrar por tipo:</label>
-            <select name="filter" id="type">
-              <option disabled selected value>Filtro por Tipo:</option>
-              <option value="Water">Agua</option>
-              <option value="Bug">Bicho-Insecto</option>
-              <option value="Dragon">Dragón</option>
-              <option value="Electric">Eléctrico</option>
-              <option value="Ghost">Fantasma</option>
-              <option value="Fire">Fuego</option>
-              <option value="Ice">Hielo</option>
-              <option value="Fighting">Lucha</option>
-              <option value="Normal">Normal</option>
-              <option value="Grass">Planta </option>
-              <option value="Psychic">Psíquico</option>
-              <option value="Rock">Roca</option>
-              <option value="Ground">Tierra</option>
-              <option value="Poison">Veneno</option>
-              <option value="Flying">Volador</option>
+            <label>Filter by Genre:</label>
+            <select name="filter" id="genre">
+              <option disabled selected value>Filter by Genre:</option>
+              <option value="Drama">Drama</option>
+              <option value="Comedy">Comedy</option>
+              <option value="Fiction">Fiction</option>
             </select>
           </div>
             <!--filtar director -->
           <div class="value-box">
-              <label>Filtrar por Huevo:</label>
-              <select name="filter" id="egg">
-                <option disabled selected value> Filtro por Huevos </option>
-                <option value="2 km">2 kms</option>
-                <option value="5 km">5 kms </option>
+              <label>Filter by director:</label>
+              <select name="filter" id="director">
+                <option disabled selected value>Filter by director:</option>
+                <option value="2 km">Steven Spilberg</option>
+                <option value="5 km">James Cameron </option>
                 <option value="10 km">10 kms</option>
-                <option value="Not in Eggs">No aparece en huevos </option>
               </select>      
           </div>
         </div>
       </section>
-      <!--Pokemon Cards-->
-      <section id="pokemon-porcent"></section>
+      <!--Movies Cards-->
       <section id="cards-container"></section>
     </main>
     <!--End Main-->
-
     <!--Start Footer-->
     <footer class="footer-content">
         <div class="info-box">
@@ -104,8 +107,8 @@
               <a href="index.html"><img src="images/viewnow-logo.png" alt="Viewnow!-Logo"></a>
             </div>
             <div class="footer-info">
-              <p>&copy; Copyright viewNOW! 2019 / Design and Development by
-              <a href="https://github.com/carolgmonteiro" target="blank_">Carolina Guido </a> <a href="https://github.com/AlejandraMoralesB" target="blank_">Alejandra Morales</a> & <a href="https://github.com/ClaudiaQuezadaRiquelme" target="blank_">Claudia Quezada</a></p>
+              <p>&copy; Copyright viewNOW! 2019 | Design and Development by
+              <a href="https://github.com/carolgmonteiro" target="blank_">Carolina Guido</a> <a href="https://github.com/AlejandraMoralesB" target="blank_">Alejandra Morales</a> & <a href="https://github.com/ClaudiaQuezadaRiquelme" target="blank_">Claudia Quezada</a></p>
               <div class="social-icons">
                 <a href="index.html"><img src="images/facebook-icon.png"></a>
                 <a href="index.html"><img src="images/instagram-icon.png"></a>
@@ -113,17 +116,15 @@
             </div>
         </div>
         <div class="subscribe">
-          <p>Suscríbete a nuestras novedades</p>
-          <input type="email" placeholder="Ingresa tu email">
-          <button id="subscribe-btn">Suscríbete</button>
+          <p>Subscribe to our news</p>
+          <input type="email" placeholder="Enter your email">
+          <button id="subscribe-btn">Subscribe</button>
         </div>  
           <button onclick="topFunction()" id="back-to-top" title="Go to top"> <i class="fas fa-arrow-up"></i></button>
     </footer>
     <!--End Footer-->
       <div id="root"></div>
-    <script src="./data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
-    <script src="modal.js"></script>
   </body>
 </html>

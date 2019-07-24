@@ -77,22 +77,50 @@ nav {
     color: none;
 }
 
-
 #start-btn {
-    background: #ffd600;
-    color: rgb(0, 0, 0);
+    background: #000000;
+    color: #c7a500;
     padding: 10px 20px 10px;
     margin-left: 30px;
-    border-radius: 30px;
-    border: #9b8103;
+    border-radius: 10px;
+    border: #000000;
     font-size: 20px;
     font-family: "Fira Sans", sans-serif;
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    width: 400px;
+    height: 50px;
 }
 
 #start-btn:hover {
     background: #c7a500;
+    color: #000000;
 }
+
+.questionTitle{
+    font-size: 30px;
+    color:#000000;
+    margin-bottom: 10px;
+
+}
+.option-btn {
+    background: #000000;
+    color: #c7a500;
+    padding: 10px 20px 10px;
+    margin-left: 30px;
+    border-radius: 10px;
+    border: #000000;
+    font-size: 25px;
+    font-family: "Fira Sans", sans-serif;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    width: 300px;
+    height: 60px;
+}
+
+.option-btn:hover {
+    background: #c7a500;
+    color: #000000;
+}
+
 
 /*Imagen cabezera----------------------*/
 .main-bg {
@@ -111,6 +139,16 @@ nav {
     padding: 30px;
     margin-left: 30px;
     max-width: 40%;
+}
+/*Suggestions*/
+.questions-bg {
+    height: 400px;
+    margin: 0px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size:75%;
+    background-color:#C8C8C8;
+    display: flex;
 }
 
 /*Options*/
@@ -439,7 +477,7 @@ footer {
 
 
 /* MODAL --------------------*/
-.modal {
+/* .modal {
     position: fixed;
     display: none;
     left: 0;
@@ -503,7 +541,7 @@ footer {
     justify-content: center;
 } */
 
-.modal-container {
+/* .modal-container {
     max-width: 600px;
     background: white;
     border-radius: 10px;
@@ -625,76 +663,7 @@ li.type-list {
     margin-left: 20px;
     display: flex;
     flex-wrap: wrap;
-}
-
- /*Pokemon types ------------>*/
- div.types {
-    padding: 0;
-  }
-  p.type-box, li.type-box{
-    padding: 3px 14px;
-    font-size: 12px;
-    border-radius: 6px;
-    margin-right: 8px;
-  }
-  p.type-box.bug, li.type-box.bug {
-    background: #a6b241;
-  }
-  p.type-box.dark, li.type-box.dark {
-    background: #7e6a5e;
-  }
-  p.type-box.dragon, li.type-box.dragon {
-    background: #6c5bbb;
-  }
-  p.type-box.electric, li.type-box.electric {
-    background: #eed535;
-  }
-  p.type-box.fairy, li.type-box.fairy{
-    background: #f0a5f2;
-  }
-  p.type-box.fighting, li.type-box.fighting{
-    background: #b85945;
-  }
-  p.type-box.fire, li.type-box.fire{
-    background: #f14730;
-  }
-  p.type-box.flying, li.type-box.flying {
-    background: #678fcf;
-  }
-  p.type-box.ghost, li.type-box.ghost {
-    background: #363453;
-  }
-  p.type-box.grass, li.type-box.grass {
-    background: #7dc95d;
-  }
-  p.type-box.ground, li.type-box.ground {
-    background: #d7bb56;
-  }
-  p.type-box.ice, li.type-box.ice {
-    background: #6bb0c3;
-  }
-  p.type-box.normal, li.type-box.normal {
-    background: #8b8382;
-  }
-  p.type-box.poison, li.type-box.poison {
-    background: #8a567e;
-  }
-  p.type-box.psychic, li.type-box.psychic {
-    background: #d55a86;
-  }
-  p.type-box.rock, li.type-box.rock {
-    background: #bfa965;
-  }
-  p.type-box.steel, li.type-box.steel {
-    background: #756f73;
-  }
-  p.type-box.water, li.type-box.water {
-    background: #3498f9;
-  }
-  
-
-
-
+} */ 
 
 
 /* RESPONSIVE -------------------------*/
