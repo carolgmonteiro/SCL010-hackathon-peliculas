@@ -66,9 +66,9 @@ Con ésta información se plantea la jerarquización de la data y de sus funcion
 
 La encuesta alcanzó un total de  respuestas en un día y se puede encontrar haciendo click [encuesta :memo:](https://forms.gle/AHvGX8Ggzbu2XGVm6)
 
-![encuesta](img-readme/encuesta1.png)
-![encuesta](img-readme/encuesta2.png)
-![encuesta](img-readme/encuesta3.png)
+<a href="https://ibb.co/6wqkJjC"><img src="https://i.ibb.co/YQVxTHs/encuesta1.png" alt="encuesta1" border="0"></a>
+<a href="https://ibb.co/bzG2R98"><img src="https://i.ibb.co/6gq1JCf/encuesta2.png" alt="encuesta2" border="0"></a>
+<a href="https://ibb.co/vVbCT9p"><img src="https://i.ibb.co/0mkp65T/encuesta3.png" alt="encuesta3" border="0"></a>
 
 #### **2.1.2-Conclusiones de la encuesta:**
 
@@ -84,7 +84,7 @@ partir de los 15 años sin limite de edad.
 #### **2.2-Historias de Usuario**
 Se definen acciones y funciones que nuestro usuario necesita y quiere realizar dentro de la app para lograr sus objetivos , la planificación se realizó mediante  un trabajo colaborativo en [Trello.](https://trello.com/b/4gvMPonj/hackathon) y utilizando ceremonias ágiles para saber las tareas como equipo, dailys y retrospectivas diarias.
 
-![Trello](img-readme/trello.png)
+<a href="https://ibb.co/BZBFmpR"><img src="https://i.ibb.co/MV7QbvL/trello.png" alt="trello" border="0"></a>
 
 
 - **Historia de usuario 1 :** “Yo como aficionado del cine, quiero  poder ver todas las películas más valoradas por la critica para saber cuales me faltan ver"
@@ -119,7 +119,7 @@ La plataforma debe tener un contenedor en la pantalla
 ###  **2.3- Diagrama de Flujo**
 A partir de las historias de usuario se define el flujo básico de la aplicación:
 
-![flujo](img-readme/flujo.jpeg)
+<a href="https://ibb.co/CbYjhts"><img src="https://i.ibb.co/F5yQgWq/mapa-de-flujo.png" alt="mapa-de-flujo" border="0"></a>
 
 
 ### **2.4-Prototipo de Baja Fidelidad**
@@ -129,31 +129,31 @@ Nuestro primer objetivo fue distribuir cada elemento de la App Web , de acuerdo 
 
 El sketch fue presentado a conocidos y a nuestra coaches para obtener feed-back, los cuales la mayoría comento que  es un prototipo de fácil de uso y amigable.
 
-![Sketch](img-readme/sketch.jpg)
+<a href="https://ibb.co/6P8SR94"><img src="https://i.ibb.co/FwX1bZB/sketch.jpg" alt="sketch" border="0"></a>
 
 #### **2.4.2- Wireframe**
 Desarrollo formal de página web, en términos de estructura, contenidos y diagramación a partir de la información y datos recopilados en la encuesta preliminar y test de usabilidad durante el desarrollo de la aplicación.
 Se desarrolla Wireframe en todas sus vistas .
 
-![wireframe](img-readme/w1.png)
-![wireframe](img-readme/w2.png)
-![wireframe](img-readme/w3.png)
-![wireframe](img-readme/w4.png)
-![wireframe](img-readme/w5.png)
+<a href="https://ibb.co/0Dbnm9T"><img src="https://i.ibb.co/znvmQ2p/w1.png" alt="w1" border="0"></a>
+<a href="https://ibb.co/d2Nc0Mk"><img src="https://i.ibb.co/C7jt58V/w2.png" alt="w2" border="0"></a>
+<a href="https://ibb.co/k8J48Qy"><img src="https://i.ibb.co/7WQnW2z/w3.png" alt="w3" border="0"></a>
+<a href="https://ibb.co/qnCGFmV"><img src="https://i.ibb.co/ZJSs1c7/w4.png" alt="w4" border="0"></a>
+<a href="https://ibb.co/G9dCr2y"><img src="https://i.ibb.co/ZSfcb85/w5.png" alt="w5" border="0"></a>
 
 #### **2.5- Colores y Tipografía**
 La gama de colores fue seleccionada  primero basada en la paginas que existen hoy en dia en el mercado,  donde se repiten las tonalidades blancas , grises y negros. El color dorado lo agregamos para darle un toque de glamour siguendo los patrones del premio mas conocido en la historia del cine , los Oscar.
 
-![Estudio](img-readme/estudio.png)
-![Colores](img-readme/colores.png)
+<a href="https://ibb.co/9rnCjbJ"><img src="https://i.ibb.co/XCXvT79/estudio.png" alt="estudio" border="0"></a>
+<a href="https://ibb.co/yh2Pc4j"><img src="https://i.ibb.co/dbZMwmY/colores.png" alt="colores" border="0"></a>
 
 #### **2.6- Prototipo de Alta Fidelidad**
 Después de la definición de usuario, de sus características, intereses y gustos, se define el diseño visual de nuestra aplicación en términos de color, fuente, logo y contenido de imágenes entre otros.
 
-![prototipoAF0](img-readme/prototipoaltafidelidad.png)
-![prototipoAF1](img-readme/PA1.png)
-![prototipoAF2](img-readme/PA2.png)
-![prototipoAF3](img-readme/PA3.png)
+<a href="https://ibb.co/BsBy4sk"><img src="https://i.ibb.co/5cLrYcZ/prototipo-Alta-FIdelidad.png" alt="prototipo-Alta-FIdelidad" border="0"></a>
+<a href="https://ibb.co/q5cyJrP"><img src="https://i.ibb.co/fvy1DxP/PA1.png" alt="PA1" border="0"></a>
+<a href="https://ibb.co/tCsJ42n"><img src="https://i.ibb.co/XJsCb56/PA2.png" alt="PA2" border="0"></a>
+<a href="https://ibb.co/hyppcHv"><img src="https://i.ibb.co/drnnt6y/PA3.png" alt="PA3" border="0"></a>
 
 ### **2.7-Testeos de Usabilidad**
 Se testea con 5 personas presentando la página web, pidiéndole  lo siguiente:
@@ -185,10 +185,8 @@ Realizamos la evaluación para nuestra página web en el siguiente sitio [haz cl
 
 - Visual Studio (HTML5, CSS, JAVASCRIPT)
 -  [Trello](https://trello.com)
--  [Stackedit](https://stackedit.io)
 -  [Balsamiq](https://balsamiq.com/)
 -  [Figma](https://www.figma.com/)
--  [Zeplin](https://zeplin.io/)
 - Illustrator
 -  [Loom](https://www.loom.com)
 -  [Git](https://git-scm.com/)
@@ -214,8 +212,8 @@ División de tareas:
 | :------------- |:-------------| :-----
 | Planning      | Planning      |  Planning |
 | HTML          | HTML          | HTML |
-| UX Design / Figma |   Readme  |CSS3
-| Flujo de Usuario / Sketches |  CSS3   | Prototypes 
+| UX Design  Prototipos Balsamiq  Figma  |   Readme  |CSS3
+| Mapa de flujo |  CSS3   | Sketches 
 | JavaScript  | JavaScript  |   JavaScript
 
 ![LeoDicaprio](https://media.giphy.com/media/6mnlYDQ4VdbUs/giphy.gif
