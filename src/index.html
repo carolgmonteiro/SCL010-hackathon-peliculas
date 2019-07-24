@@ -35,16 +35,16 @@
         <div id="feeling" style="display: none" class="questions-bg">
           <!--Input user feelings-->
           <div><h1>What´s your mood today?</h1></div>
-          <button id="curious-btn" class="option-btn" value="">Curious</button>
-          <button id="happy-btn" class="option-btn">Happy</button>
-          <button id="sad-btn" class="option-btn">Sad</button>
+          <input type="button" value="Curious" id="curious-btn" class="option-btn">
+          <input type="button" value="Happy" id="happy-btn" class="option-btn">
+          <input type="button" value="Sad" id="sad-btn" class="option-btn">
         </div>
         <div id="time" style="display: none" class="questions-bg">
           <!--Input user time-->
           <div class="questionTitle"><h1>What about your time?</h1></div>
-          <button id="hurry-btn" class="option-btn">In a hurry</button>
-          <button id="ok-btn" class="option-btn">OK</button>
-          <button id="relaxed-btn" class="option-btn">Relaxed</button>
+          <input type="button" value="In a hurry" id="hurry-btn" class="option-btn">
+          <input type="button" value="I have some time" id="ok-btn" class="option-btn">
+          <input type="button" value="Relaxed" id="relaxed-btn" class="option-btn">
         </div>
         <!--Movie Cards-->
         <div id="cardsSuggestions" style="display: none" class="questions-bg">
@@ -68,16 +68,16 @@
           <div class = "sort">
           <div class="sortby-box">
             <label>Order by:</label>
-            <select name="Order" id="sort-Pokemon">
+            <select name="Order" id="sort-Movie">
               <option disabled selected value>Order by:</option>
-              <option id="name-up" value="A-Z">A-Z</option>
-              <option id="name-down" value="Z-A">Z-A</option>
+              <option id="slctName-up" value="AZ">A-Z</option>
+              <option id="slctName-down" value="ZA">Z-A</option>
           </select>
           </div>
           <!--Filtrar Genero-->
           <div class="type-filter">
             <label>Filter by Genre:</label>
-            <select name="filter" id="genre">
+            <select name="filter" id="slctGenre">
               <option disabled selected value>Filter by Genre:</option>
               <option value="Drama">Drama</option>
               <option value="Comedy">Comedy</option>
@@ -87,11 +87,11 @@
             <!--filtar director -->
           <div class="value-box">
               <label>Filter by director:</label>
-              <select name="filter" id="director">
+              <select name="filter" id="slctDirector">
                 <option disabled selected value>Filter by director:</option>
-                <option value="2 km">Steven Spilberg</option>
-                <option value="5 km">James Cameron </option>
-                <option value="10 km">10 kms</option>
+                <option value="Steven Spilberg">Steven Spilberg</option>
+                <option value="Adam McKay">Adam McKay</option>
+                <option value="Denis Villeneuve">Denis Villeneuve</option>
               </select>      
           </div>
         </div>
@@ -124,6 +124,7 @@
     </footer>
     <!--End Footer-->
       <div id="root"></div>
+    <script src="./data/movies.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
   </body>

@@ -1,71 +1,91 @@
-# "Hackathon: ViewNOW!"🎬
+![logo 2](img-readme/logo2.png)
 
-“ViewNOW!” es una aplicación web que  brinda a los usuarios información relevante sobre las películas más valoradas por la critica. Está dirigida para todo tipo de usuarios sobretodo para los que siempre están pidiendo datos referentes de la película que van a disfrutar o no saben que ver, esto lo hara al oprimir botones  segun el  animo de la persona y tiempo , ademas tendra selectores con filtro sobre los géneros y directores.Este sitio permitirá información  que se adecúa a las  necesidades, requerimientos y curiosidades del usuario , además tiene un planteamiento de diseño inclusivo que asegura  las necesidades del mayor número de consumidores son satisfechas.
+#**1-ViewNOW!**
+Es una aplicación web que  brinda a los usuarios información relevante sobre las películas más valoradas por la critica . Está dirigida para todo tipo de usuarios sobretodo para los que siempre están pidiendo datos referentes de la película que van a disfrutar o no saben que ver, este sitio recomendara peliculas al oprimir botones  segun el  animo de la persona y tiempo , ademas tendra selectores con filtro sobre los géneros y directores.Este sitio permitirá información  que se adecúa a las  necesidades, requerimientos y curiosidades del usuario , además tiene un planteamiento de diseño inclusivo que asegura  las necesidades del mayor número de consumidores son satisfechas.
 
-• Para acceder a demo de app [haz click aquí](www.   )
+• Para acceder a demo de app [haz click aquí](https://carolgmonteiro.github.io/SCL010-hackathon-peliculas/src/index.html)
 
 ***
 
- ## Índice (MODIFICAR )!!!!
+ ## **Índice** 
 
-* [Preámbulo](#preámbulo)
-* [Resumen del proyecto](#resumen-del-proyecto)
-* [Consideraciones generales](#consideraciones-generales)
-* [Objetivos de aprendizaje](#objetivos-de-aprendizaje)
-* [Parte obligatoria](#parte-obligatoria)
-* [Consideraciones técnicas](#consideraciones-técnicas)
+* [1-ViewNOW!](#ViewNOW!)
+  * [1.1- Preámbulo](#preámbulo)
+  * [1.2-Usuario](#usuario)
+  * [1.3-Problemática del Usuario](#problemática-del-Usuario)
+  * [1.4-Objetivos de la Aplicación](#objetivos-de-la-aplicacion)
+* [2-Metodología UX](#Metodología-UX)
+  * [2.1-Encuesta online](#Encuesta-online)
+    * [2.1.1-Alcance de la encuesta:](#alcance-de-la-encuesta:)
+    * [2.1.2-Conclusiones de la encuesta:](#conclusiones-de-la-encuesta:)
+  * [2.2-Historias de Usuario](#historias-de-usuario)
+  * [2.3- Diagrama de Flujo](#diagrama-de-flujo)
+  * [2.4-Prototipo de Baja Fidelidad](#prototipo-de-baja-fidelidad)
+    * [2.4.1-Sketch](#sketch)
+    * [2.4.2- Wireframe](#wireframe)
+  * [2.5-Colores y Tipografía](#colores-y-tipografía)
+  * [2.6- Prototipo de Alta Fidelidad](#prototipo-de-alta-fidelidad)
+  * [2.7-Testeos de Usabilidad](#testeos-de-usabilidad)
+  * [2.8 Evaluación heuristica ](#evaluación-heuristica)
+*  [3-Herramientas](#herramientas)
+*  [4-Futuras Mejoras](#futurasmejoras)
+*  [5-Desarrolladoras](#desarrolladoras)
 
  ***
-
- ## **Preámbulo**📋
+ ## **1.1-Preámbulo**📋
 Con la aparición de plataformas para ver películas en la nube, como Netflix o Hulu, ver películas desde donde estés, comiendo lo que quieras (sin tener que pagar precios ridículos por pop-corn / pipoca / palomitas / canchita / cabritas), parando si es necesario, teniendo acceso a una cantidad abrumadora de películas... ha cambiado la experiencia del usuario y modificado el mercado de las películas a nivel global.
 
  ![Pelis](https://media.giphy.com/media/NipFetnQOuKhW/giphy.gif)
 
-### **Usuario**
+### **1.2-Usuario**
 
 Nuestro usuario es apartir de los 15 años en adelante que le guste ver peliculas en casa mediante las diferentes plataformas que existen hoy en el mercado. 
 
-### **Problemática del Usuario**
+### **1.3-Problemática del Usuario**
 
-Hay tantas películas y servicios que es posible que no sepas qué ver. Con el amplio catálogo de Netflix, de HBO, de los cines y el cable ,  es difícil  elegir y   muchas veces se puede pasar 20 minutos navegando y todavía no se  decide qué película ver. Si tú también eres un usuario indeciso o no sabes qué películas se adecúan a tus gustos o estado de animo,  existe nuestra aplicacion ViewNOW!
-Hay tantas películas y servicios que es posible que no sepas qué ver. Con el amplio catálogo de Netflix, de HBO, de los cines y el cable ,  es difícil  elegir, por lo tanto NOMBRE APLICACION  esta aplicación llega a solucionar el problema  a los que siempre están pidiendo consejo a sus amigos, familiares , compañeros  sobre qué  película ver , se puede ver información importante  y  además  recomienda qué puedes ver.
+Hay tantas películas y servicios que es posible que no sepas qué ver. Con el amplio catálogo de Netflix, de HBO, de los cines y el cable ,  es difícil  elegir y   muchas veces se puede pasar 20 minutos navegando y todavía no se  decide qué película ver. Si tú también eres un usuario indeciso o no sabes qué películas se adecúan a tu estado de animo y tiempo,  existe nuestra aplicacion ViewNOW!, esta aplicación llega a solucionar el problema  a los que siempre están pidiendo consejo a sus amigos, familiares , compañeros  sobre qué  película ver , se puede ver información importante  y  además  recomienda qué puedes ver.
 
 Además tiene un  diseño inclusivo  que no sólo mejora la experiencia de usuario de un producto para las personas con discapacidades, sino también para todos los demás. Por ejemplo, un sitio web accesible probablemente sea más fácil de leer para todos, no sólo para alguien que tiene problemas con la vista.
 
+### **1.4-Objetivos de la Aplicación**
 
+- Permite ver las peliculas mas valoradas y premiadas por la critica cineasta.
+- Recomienda que pelicula ver contestando unas simple preguntas segun estado de animo y tiempo. 
+- Filtra por genero y director. 
+- Busca peliculas reconocidas .
+- Apunta a un Diseño inclusivo. 
 
-}P
+## **2-Metodología UX** 📌
 
-### **Objetivos de la Aplicación**
-
-- Ver data de  películas mas valoradas.
-- Filtrar las películas según  categorías y  animo del usuario.
-- Ordenar
-- Buscar las películas por su nombre
-
-## Metodología UX 📌
-
-####Encuesta
+###**2.1-Encuesta online**
 Se redacta y ejecuta una encuesta con el Formulario de Google Forms, para definir los parámetros generales de la aplicación, por ejemplo a qué usuario nos vamos a dirigir, cuáles son sus necesidades e intereses sobre , como también para obtener claridad sobre cuál es la información más relevante a la que dichos usuarios necesitarían acceso.
 
-Con ésta información se plantea la jerarquización de la data y de sus funcionalidades para poder acomodarla dentro del flujo de la aplicación junto con parámetros de usabilidad (web y móvil) como también de diseño de interface (UI).
+Con ésta información se plantea la jerarquización de la data y de sus funcionalidades para poder acomodarla dentro del flujo de la aplicación junto con parámetros de usabilidad como también de diseño de interface (UI).
 
-#### Alcance de la encuesta:
+#### **2.1.1-Alcance de la encuesta:**
 
 La encuesta alcanzó un total de  respuestas en un día y se puede encontrar haciendo click [encuesta :memo:](https://forms.gle/AHvGX8Ggzbu2XGVm6)
 
-#### Conclusiones de la encuesta:
+![encuesta](img-readme/encuesta1.png)
+![encuesta](img-readme/encuesta2.png)
+![encuesta](img-readme/encuesta3.png)
+
+#### **2.1.2-Conclusiones de la encuesta:**
+
 A partir de los resultados pudimos obtener y definir:
 
-- Nuestro usuario target: 
-- Información relevante para ordenar: 
-- Información relevante para filtrar:
+- Tema definido : Peliculas recocidas y premiadas.
+partir de los 15 años sin limite de edad.
+- Nuestro usuario target: A partir de los 15 años sin limite de edad .
+- Información relevante para filtrar:Director y genero. 
+- Información relevante para ordenar: Orden alfabetico
 
 
-#### **Historias de Usuario**
-Se utilizan ceremonias ágiles para saber las tareas como equipo, dailys y retrospectivas diarias , 
-Se definen acciones y funciones que nuestro usuario necesita y quiere realizar dentro de la app para lograr sus objetivos , la planificación se realizó mediante  un trabajo colaborativo en [Trello.](https://trello.com/b/4gvMPonj/hackathon) y mediante ceremonias ágiles para saber las tareas como equipo, dailys y retrospectivas diarias.
+#### **2.2-Historias de Usuario**
+Se definen acciones y funciones que nuestro usuario necesita y quiere realizar dentro de la app para lograr sus objetivos , la planificación se realizó mediante  un trabajo colaborativo en [Trello.](https://trello.com/b/4gvMPonj/hackathon) y utilizando ceremonias ágiles para saber las tareas como equipo, dailys y retrospectivas diarias.
+
+![Trello](img-readme/trello.png)
+
 
 - **Historia de usuario 1 :** “Yo como aficionado del cine, quiero  poder ver todas las películas más valoradas por la critica para saber cuales me faltan ver"
 
@@ -96,52 +116,55 @@ La plataforma debe tener un contenedor en la pantalla
 
 ➡ Criterios de aceptación: Se creará un modal que se desplegará al momento de seleccionar por el usuario una opción de película; luego se mostrara una ficha con las características de la película.
 
-###  **Diagrama de Flujo**
+###  **2.3- Diagrama de Flujo**
 A partir de las historias de usuario se define el flujo básico de la aplicación:
 
-![]()
+![flujo](img-readme/flujo.jpeg)
 
-### **Prototipo de Baja Fidelidad**
+
+### **2.4-Prototipo de Baja Fidelidad**
  
-#### **Sketch**
+#### **2.4.1-Sketch**
 Nuestro primer objetivo fue distribuir cada elemento de la App Web , de acuerdo a lo visto en las historias de usuario.
 
-El sketch fue presentado a distintos grupos de trabajo en Laboratorio  y conocidos para obtener feed-back, los cuales la mayoría comento que  es un prototipo de fácil de uso y amigable.
+El sketch fue presentado a conocidos y a nuestra coaches para obtener feed-back, los cuales la mayoría comento que  es un prototipo de fácil de uso y amigable.
 
-![sketch web]()
-![sketch mobile]()
+![Sketch](img-readme/sketch.jpg)
 
-#### **Wireframe**
+#### **2.4.2- Wireframe**
 Desarrollo formal de página web, en términos de estructura, contenidos y diagramación a partir de la información y datos recopilados en la encuesta preliminar y test de usabilidad durante el desarrollo de la aplicación.
-Se desarrolla Wireframe para versión web y para versión mobile.
-![wireframe web]()
-![wireframe mobile]()
+Se desarrolla Wireframe en todas sus vistas .
 
-### **Prototipo de Alta Fidelidad**
+![wireframe](img-readme/w1.png)
+![wireframe](img-readme/w2.png)
+![wireframe](img-readme/w3.png)
+![wireframe](img-readme/w4.png)
+![wireframe](img-readme/w5.png)
+
+#### **2.5- Colores y Tipografía**
+La gama de colores fue seleccionada  primero basada en la paginas que existen hoy en dia en el mercado,  donde se repiten las tonalidades blancas , grises y negros. El color dorado lo agregamos para darle un toque de glamour siguendo los patrones del premio mas conocido en la historia del cine , los Oscar.
+
+![Estudio](img-readme/estudio.png)
+![Colores](img-readme/colores.png)
+
+#### **2.6- Prototipo de Alta Fidelidad**
 Después de la definición de usuario, de sus características, intereses y gustos, se define el diseño visual de nuestra aplicación en términos de color, fuente, logo y contenido de imágenes entre otros.
 
-#### **Colores**
+![prototipoAF0](img-readme/prototipoaltafidelidad.png)
+![prototipoAF1](img-readme/PA1.png)
+![prototipoAF2](img-readme/PA2.png)
+![prototipoAF3](img-readme/PA3.png)
 
-![colors]()
-
-#### **Tipografía**
-![Tipografía]()
-
-#### **Logotipo**
-![logotipo]()
-
-### **Testeos de Usabilidad**
+### **2.7-Testeos de Usabilidad**
 Se testea con 5 personas presentando la página web, pidiéndole  lo siguiente:
-- Visualizar la data 
-- Ordena por nombre ascendente.
-- Ordena 
-- Filtra 
-- Busca . 
-- Filtra 
+- Visualizar Pagina
+- buscar pelicula para ver
+- Filtra por genero y director 
+- Busca alguna pelicula "Blancanieves". 
 
 Al finalizarla el test se les pregunta:
 - ¿Sabes de que trata la página?
-- ¿La utilizarías para ver la película?
+- ¿La utilizarías para buscar que ver o buscar alguna película?
 - ¿Agregarías Algo?
 
 **Usuario 1:**
@@ -154,31 +177,33 @@ Al finalizarla el test se les pregunta:
 
 **Usuario 5:**
 
-### Evaluación heuristica
-Realizamos la evaluación para nuestra página web en el siguiente sitio [haz click aquí]()
+### **2.8 Evaluación heuristica **
+Realizamos la evaluación para nuestra página web en el siguiente sitio [haz click aquí](https://docs.google.com/spreadsheets/d/1WqaUHThau9wam46izLvE3mhmPdidPLpY_1RKa1ULrUM/edit?usp=sharing)
 
-### 2.8. Interfaz Usuario 
-La interfaz permite al usuario:
-- Visualizar Data.
-- Filtrar.
-- Ordenar la Data 
-- Buscar Película por Nombre.
 
-## Pruebas Unitarias 💻
+## **3-Herramientas**  🛠️
 
-![test]()
+- Visual Studio (HTML5, CSS, JAVASCRIPT)
+-  [Trello](https://trello.com)
+-  [Stackedit](https://stackedit.io)
+-  [Balsamiq](https://balsamiq.com/)
+-  [Figma](https://www.figma.com/)
+-  [Zeplin](https://zeplin.io/)
+- Illustrator
+-  [Loom](https://www.loom.com)
+-  [Git](https://git-scm.com/)
+-  [GitHub](https://github.com/)
+-  [GitHub Pages](https://pages.github.com/)
+-  [Node.js](https://nodejs.org/)
 
-## Herramientas  🛠️
+## **4-Futuras Mejoras**
 
-- Git
-- GitHub
-- GitHub Pages
-- Node.js
-- Visual Studio Code: Programación
-- framework de css
-- Trello
+- Hacer la version en español 
+- Introducir mas data y actualizarla constantemente
 
-##Desarrolladoras 
+
+
+## **5-Desarrolladoras**
 - [Carolina Guido](https://github.com/carolgmonteiro)
 - [Alejandra Morales](https://github.com/AlejandraMoralesB)
 - [Claudia Quezada](https://github.com/ClaudiaQuezadaRiquelme)
@@ -189,21 +214,9 @@ División de tareas:
 | :------------- |:-------------| :-----
 | Planning      | Planning      |  Planning |
 | HTML          | HTML          | HTML |
-| UX Design / Figma |   Historias de Usuario |
-| Flujo de Usuario / Sketches |  Readme   | 
-| JavaScript  | JavaScript  | JavaScript  
+| UX Design / Figma |   Readme  |CSS3
+| Flujo de Usuario / Sketches |  CSS3   | Prototypes 
+| JavaScript  | JavaScript  |   JavaScript
 
-
-| JavaScript    | Bootstrap     | Flujo de Usuario / Sketches|
-| Lógica        | Responsive    | Prototypes |
-| Funciones     | JavaScript/Modificaciones    | README |
-
-
-
-# **Tips para la organización de trabajo entre UX y Front end**
-
-* Las UX y FE entienden en conjunto el reto en el que van a trabajar, se organizan y arman sus primeros bocetos.
-* Con los primeros bocetos/ideas, las FE pasan a crear su ambiente de desarrollo y a crear componentes atómicos que luego les sea fácil personalizar con CSS y utilizar para crear interfaces más complejas. Además, las FE empiezan también a trabajar en la lógica de la aplicación. Mientras tanto, las UX crean una guía de estilos, los flujos de usuarios, hacen un prototipo más completo y lo testean.
-* Las UX comparten el prototipo testeado, para que el equipo empiece a personalizar los componentes y a ponerlos en conjunto.
-* Las UX hacen QA y testing con los releases que vayan haciendo las FE.
-* Planifiquen, historias de usuario y definition of done son importantísimos.
+![LeoDicaprio](https://media.giphy.com/media/6mnlYDQ4VdbUs/giphy.gif
+)

@@ -1,36 +1,38 @@
-//Buscar la data en la internet
-// fetch('https://raw.githubusercontent.com/carolgmonteiro/SCL010-data-lovers/master/src/data/pokemon/pokemon.json')
-//       .then(response => 
-//        response.json())
-//       .then(data => {
 
-// //criar variable para linkear la con la data Pokemon en JASON
-// // const pokeData = data.pokemon;
-// const movieData = data.movies;
-// variable para la busqueda de pokemon o condicion
+// VARIABLE PARA DATA DE PELICULAS
+const movieData = window.MOVIES.movies;
+// variable para la busqueda de peliculas o condicion
 let searchMovie;
-// // variable para el valor del orden
-// // let orderValue;
+// variable para el valor del orden
+let orderValue;
 // //VARIABLE PARA IMPRIMIR LOS CARDS
 let cardGallery = "";
 const movieResult = document.getElementById("cards-container");
-// const pokeStatsResult = document.getElementById("pokeStats");
-// //IMPRIMIR CARDS EN LA GALERIA 
-//  const showGallery = (data) => {
-//   for (let i = 0; i < data.length; i++){
-//     cardGallery +=
-//     //onclick="showModal(${data[i].id})"
-//      `<div class="card" style="width: 210px;" data-toggle="modal">
-//      <h3 class="card-title">${data[i].num} ${data[i].name}</h3>
-//      <img class="card-img-top" src=${data[i].img} alt="Card image cap">
-//      <div class="card-body">
-//      <p class="card-text">Tipo: ${data[i].type}</p>
-//      <p class="card-text">Debilidad: ${data[i].weaknesses}</p>
-//      <p class="card-text">Freq. horária: ${data[i].spawn_time}hrs</p>
-//      </div>
-//      </div>`
-//     } pokeResult.innerHTML = cardGallery;
-//   };
+const movieSuggestion = document.getElementById("cardsSuggestions");
+const movieCards = document.getElementById("cards-container")
+
+//IMPRIMIR CARDS EN LA GALERIA 
+ const showGallery = (movieData) => {
+  for (let i = 0; i < movieData.length; i++){
+    cardGallery +=
+    //onclick="showModal(${data[i].id})"
+     `<div class="movie-card" style="width: 210px; height: 420px;" data-toggle="modal">
+     <img class="movie-card img" src=${movieData[i].Poster} alt="Card image cap">
+     <h3 class="movie-name">${movieData[i].Title} ${movieData[i].Year}</h3>
+     <div class="movie-body">
+     <p class="movie-text">Genre: ${movieData[i].Genre}</p>
+     <p class="movie-text">Runtime: ${movieData[i].Runtime}</p>
+     <p class="movie-text">Director: ${movieData[i].Director}</p>
+     </div>
+     </div>`
+    } movieCards.innerHTML = cardGallery;
+  };
+
+//CARDS DE PELICULAS EN LA GALERIA EN ORDEN ALEATORIA
+const randomData = (movieData)=>{
+  return movieData.sort(() => Math.random() - 0.5)
+};
+showGallery(randomData(movieData));
 
 //FUNCION PARA IMPRIMIR DESDE BUSCAR
 const showGallerySearch = (data) => {
@@ -63,12 +65,6 @@ document.getElementById("search-btn").addEventListener("click", ()=> {
     showGallerySearch(jsonObj);
   }
 });
-
-// //CARDS DE PELICULAS EN LA GALERIA EN ORDEN ALEATORIA
-// const randomData = (data)=>{
-//   return data.sort(() => Math.random() - 0.5)
-// };
-// showGallery(randomData(pokeData));
 
 //SUGERENCIA DE PELICULAS
 //Home para Sentimiento
@@ -111,51 +107,38 @@ document.getElementById("relaxed-btn").addEventListener ("click", ( ) => {
   document.getElementById("cardsSuggestions").style.display = "block";
 });
 
-// //PoketGo Home (down)
-// document.getElementById("btnBackHome1").addEventListener ("click", ( ) => {
-//   cardGallery ="";
-//   pokeStatsResult.innerHTML = "";
-//   document.getElementById("home").style.display = "block";
-//   document.getElementById("headerInfo").style.display = "block";
-//   document.getElementById("allPokemons").style.display = "block";
-//   document.getElementById("poketGo").style.display = "none";
-// });
+//FILTRO POR GENERO
+document.getElementById("slctGenre").addEventListener ("change", ( ) => {
+  cardGallery ="";
+  searchMovie = document.getElementById("slctGenre").options[document.getElementById("slctGenre").selectedIndex].value;
+//console.log(searchMovie);
+  //Imprimir el resultado por genero
+  showGallery(window.movieData.filterData(movieData, searchMovie));
+});
 
-// //FILTRO POR GENERO
-// document.getElementById("slctFilterType").addEventListener ("change", ( ) => {
-//   cardGallery ="";
-//   pokeStatsResult.innerHTML = "";
-//   searchPokemon = document.getElementById("slctFilterType").options[document.getElementById("slctFilterType").selectedIndex].value;
-//   //Imprimir la estadistica por tipo
-//   pokeStatsResult.innerHTML = window.dataPokemon.computeStats(pokeData, searchPokemon);
-//   //Imprimir el resultado por tipo
-//   showGallery(window.dataPokemon.filterData(pokeData, searchPokemon));
-// });
-// //FILTRO POR DIRECTOR
-// document.getElementById("slctFilterWeaknesses").addEventListener ("change", ( ) => {
-//   cardGallery ="";
-//   pokeStatsResult.innerHTML = "";
-//   //Guardar la selección del usuario
-//   searchPokemon = document.getElementById("slctFilterWeaknesses").options[document.getElementById("slctFilterWeaknesses").selectedIndex].value;
-//   //Imprimir el resultado por debilidad
-//   showGallery(window.dataPokemon.filterData(pokeData, searchPokemon));
-// });
-// //FILTRO ORDEN
-// document.getElementById("slctFilterOrder").addEventListener ("input", ( ) => {
-//   cardGallery ="";
-//   pokeStatsResult.innerHTML = "";
-//   //Guardar la selección del usuario
-//   orderValue = document.getElementById("slctFilterOrder").value;
-// if (orderValue == "AZ") {
-//   showGallery(window.dataPokemon.sortData(pokeData, "name", "ascendente"));
-// } else if (orderValue == "ZA") {
-//   showGallery(window.dataPokemon.sortData(pokeData, "name", "descendente"));
+
+
+//FILTRO POR DIRECTOR
+document.getElementById("slctDirector").addEventListener ("change", ( ) => {
+  cardGallery ="";
+  //Guardar la selección del usuario
+  searchMovie = document.getElementById("slctDirector").options[document.getElementById("slctDirector").selectedIndex].value;
+  //Imprimir el resultado por debilidad
+  showGallery(window.movieData.filterData(movieData, searchMovie));
+});
+//FILTRO ORDEN
+document.getElementById("sort-Movie").addEventListener ("input", ( ) => {
+  cardGallery ="";
+  //Guardar la selección del usuario
+  orderValue = document.getElementById("sort-Movie").value;
+if (orderValue == "AZ") {
+  showGallery(window.movieData.sortData(movieData, "Title", "ascendente"));
+} else if (orderValue == "ZA") {
+  showGallery(window.movieData.sortData(movieData, "Title", "descendente"));
 // } else if (orderValue == "1-151") {
 //   showGallery(window.dataPokemon.sortData(pokeData, "number", "ascendente"));
 // } else if (orderValue == "151-1") {
 //   showGallery(window.dataPokemon.sortData(pokeData, "number", "descendente"));
-// }
-// });
+}
+});
 
-
-// });
