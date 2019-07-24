@@ -7,7 +7,7 @@ window.dataPokemon = {
             return data.filter(element => element.type[0] === condition || element.type[1] === condition);
           //filtrar por debilidad
           } else if ((data[i].weaknesses).includes(condition)){
-            return data.filter(element => element.weaknesses[0] === condition || element.weaknesses[1] === condition || element.weaknesses[2] === condition || element.weaknesses[3] === condition);  
+            return data.filter(element => element.weaknesses[0] === condition || element.weaknesses[1] === condition || element.weaknesses[2] === condition || element.weaknesses[3] === condition);
           }
         }
       },
@@ -18,7 +18,7 @@ window.dataPokemon = {
             sorted = data.sort((a, b) => a.name.localeCompare(b.name));
           } else if (sortOrder == "descendente"){
             sorted = data.sort((a, b) => a.name.localeCompare(b.name)).reverse();
-          } 
+          }
           return sorted;
         }
         if (sortBy == "number"){
@@ -26,7 +26,7 @@ window.dataPokemon = {
             sorted = data.sort((a, b) => a.num.localeCompare(b.num));
           } else if (sortOrder == "descendente"){
             sorted = data.sort((a, b) => a.num.localeCompare(b.num)).reverse();
-          } 
+          }
           return sorted;
         }
       },
@@ -35,6 +35,12 @@ window.dataPokemon = {
         let result = data.filter(element => element.type[0] === condition || element.type[1] === condition);
         return "Los Pokemones deste tipo representan " + Math.round((result.length*100) / data.length)+"% de todos los de la Generación Kanto";
       }
+    },
+
+      standardHttpGetRequest: (yourUrl)=> {
+        let Httpreq = new XMLHttpRequest(); // a new request
+        Httpreq.open("GET",yourUrl,false);
+        Httpreq.send(null);
+        return Httpreq.responseText;
       }
     };
-    
