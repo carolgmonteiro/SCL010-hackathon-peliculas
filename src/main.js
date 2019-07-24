@@ -44,7 +44,6 @@ const movieCards = document.getElementById("cards-container")
     </div>`;
     suggestionResult.innerHTML = cardGallery;
   };
-
 //FUNCION PARA IMPRIMIR DESDE BUSCAR
 const showGallerySearch = (data) => {
   cardGallery +=
@@ -61,7 +60,6 @@ const showGallerySearch = (data) => {
    </div>`;
   movieResult.innerHTML = cardGallery;
 };
-
 //CARDS DE PELICULAS EN LA GALERIA EN ORDEN ALEATORIA
 const randomData = (movieData)=>{
   return movieData.sort(() => Math.random() - 0.5)
@@ -78,19 +76,12 @@ document.getElementById("search-btn").addEventListener("click", ()=> {
     let jsonObj = JSON.parse(window.dataMovie.standardHttpGetRequest(urlFilm)); //Convierto el archivo json del url en un objeto
     showGallerySearch(jsonObj);
   } 
-  if(document.getElementById("searchMovie").value == "undefined"){
-    movieResult.innerHTML = "";
-    cardGallery = "No results found";
-    console.log(cardGallery);
-    }
 });
-
 //SUGERENCIA DE PELICULAS
 let feelingOption = "";
 let timeOption = "";
 let arrayMoviesByGenre = [];
 let arrayMoviesByTime = [];
-
 //Home para Sentimiento
 document.getElementById("start-btn").addEventListener ("click", ( ) => {
   document.getElementById("home").style.display = "none";
@@ -192,32 +183,58 @@ let returnMoviesByTime = (arrayMovies)=> {
   }
   return arrayTime;
 }
-
 //arrayMoviesByTime = returnMoviesByTime(arrayMoviesByGenre);
-
 let showDataMoviesByTime = (arrayData)=> {
   for (let i=0; i<arrayData.length; i++) {
     showGallerySuggest(arrayData[i]);
   }
 }
-
 //FILTRO POR GENERO
+let arrayGenres;
 document.getElementById("slctGenre").addEventListener ("change", ( ) => {
   cardGallery ="";
   searchMovie = document.getElementById("slctGenre").options[document.getElementById("slctGenre").selectedIndex].value;
 //console.log(searchMovie);
-  //Imprimir el resultado por genero
+  // Imprimir el resultado por genero
   showGallery(window.movieData.filterData(movieData, searchMovie));
+    // for (let i = 0; i < movieData.length; i++){
+    //   let arrayGenres = movieData[i].Genre.split(", ")//transformar string generos en array generos
+    //   for(let i=0; i<arrayGenres.length; i++) {
+    //     if(!(searchMovie.localeCompare(arrayGenres[i]))){
+    //     arrayGenres.push(movieData[i]);
+    //     console.log(arrayGenres);
+    //     movieResult.innerHTML += `<div class="movie-card" style="width: 210px; height: 420px;" data-toggle="modal">
+    //     <img class="movie-card img" src=${movieData[i].Poster} alt="Card image cap">
+    //     <h3 class="movie-name">${movieData[i].Title} ${movieData[i].Year}</h3>
+    //     <div class="movie-body">
+    //     <p class="movie-text">Genre: ${movieData[i].Genre}</p>
+    //     <p class="movie-text">Runtime: ${movieData[i].Runtime}</p>
+    //     <p class="movie-text">Director: ${movieData[i].Director}</p>
+    //     </div>
+    //     </div>`
+        // 
+      //filtrar por genero
+      // if([arrayGenres[i].Genre].includes(searchMovie)){
+      //   return arrayGenres.filter(element => element.Genre[0] === condition || element.Genre[1] === condition || element.Genre[2] === condition || element.Genre[3] === condition || element.Genre[4] === condition || element.Genre[5] === condition);
+      //filtrar por director
+      // } else if ((data[i].Director).includes(condition)){
+      //   return data.filter(element => element.Director[0] === condition || element.Director[1] === condition || element.Director[2] === condition || element.Director[3] === condition);  
+      // }
+//     }
+//   }
+// }
+  // showGallery(arrayGenres[i]); 
 });
 
-//FILTRO POR DIRECTOR
-document.getElementById("slctDirector").addEventListener ("change", ( ) => {
-  cardGallery ="";
-  //Guardar la selección del usuario
-  searchMovie = document.getElementById("slctDirector").options[document.getElementById("slctDirector").selectedIndex].value;
-  //Imprimir el resultado por debilidad
-  showGallery(window.movieData.filterData(movieData, searchMovie));
-});
+
+// //FILTRO POR DIRECTOR
+// document.getElementById("slctDirector").addEventListener ("change", ( ) => {
+//   cardGallery ="";
+//   //Guardar la selección del usuario
+//   searchMovie = document.getElementById("slctDirector").options[document.getElementById("slctDirector").selectedIndex].value;
+//   //Imprimir el resultado por debilidad
+//   showGallery(window.movieData.filterData(movieData, searchMovie));
+// });
 //FILTRO ORDEN
 document.getElementById("sort-Movie").addEventListener ("input", ( ) => {
   cardGallery ="";

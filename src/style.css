@@ -14,7 +14,7 @@ body {
     background: #484848;
 }
 
-h1, h2, p {
+h1, h2, h4,h5, p {
     font-family:  'Merriweather', serif;;
 }
 
@@ -29,6 +29,16 @@ h2 {
     font-weight: 400;
     font-size: 20px;
 }
+
+h4, h5, h6{
+
+    font-size: 30px;
+    color:#000000;
+    margin-bottom: 10px;
+    text-align: unset;
+    padding: 70px;
+}
+
 p {
     font-weight: 200;
     font-size: 13px;
@@ -80,15 +90,15 @@ nav {
 #start-btn {
     background: #000000;
     color: #c7a500;
-    padding: 10px 20px 10px;
-    margin-left: 30px;
+    margin-left: 60px;
     border-radius: 10px;
     border: #000000;
-    font-size: 20px;
+    font-size: 25px;
     font-family: "Fira Sans", sans-serif;
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    width: 400px;
+    width: 299px;
     height: 50px;
+    margin: 30px;
 }
 
 #start-btn:hover {
@@ -144,12 +154,13 @@ nav {
 .questions-bg {
     height: 400px;
     margin: 0px;
-    background-repeat: no-repeat;
-    background-size:50%;
-    background-color:#C8C8C8;
+    background-image: url(images/header2.jpg);
+    background-size:75%;
+    background-color:rgb(255, 255, 255);
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
 }
+
 .cards-suggestions {
     background: #C8C8C8;
     padding: 20px;
@@ -288,7 +299,7 @@ select option {
     border-radius: 10px;
     padding: 20px;
     height: 250px;
-    width: 150px;
+    width: 160px;
     margin: 10px;
     background: #fff;
     box-shadow: 0 14px 28px #01285A40, 0 10px 10px #01285A40;    
@@ -359,7 +370,7 @@ footer {
 }
 
 .subscribe input {
-    border: 2px solid #ffd600;
+    border: 2px solid#c7a500;
     padding: 10px;
     border-radius: 5px;
     margin-top: 5px;
@@ -368,7 +379,7 @@ footer {
 }
 
 #subscribe-btn {
-    background: #ffd600;
+    background: #c7a500;
     color: rgb(255, 255, 255);
     padding: 10px 20px 10px;
     margin-left: 10px;
