@@ -1,4 +1,3 @@
-
 // VARIABLE PARA DATA DE PELICULAS
 const movieData = window.MOVIES.movies;
 // variable para la busqueda de peliculas o condicion

@@ -8,7 +8,6 @@ window.movieData = {
             returnArray.push(data[i]);
         }
       }
-        // console.log(returnArray);
         return returnArray;
       },
 
@@ -20,7 +19,6 @@ window.movieData = {
             returnArray.push(data[i]);
         }
       }
-        // console.log(returnArray);
         return returnArray;
       },
       
