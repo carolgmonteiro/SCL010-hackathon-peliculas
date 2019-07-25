@@ -17,10 +17,10 @@ const movieCards = document.getElementById("cards-container")
   for (let i = 0; i < movieData.length; i++){
     cardGallery +=
     //onclick="showModal(${data[i].id})"
-     `<div class="movie-card" style="width: 210px; height: 400px;" data-toggle="modal">
+     `<div class="movie-card" style="width: 280px; height: 450px;" data-toggle="modal">
+     <div><button class="movie-ratting"> ${movieData[i].imdbRating}</button></div>
      <img class="movie-card img" src=${movieData[i].Poster} alt="Card image cap">
-     <h3 class="movie-name">${movieData[i].Title} ${movieData[i].Year}</h3>
-     <div class="movie-body">
+     <h3 class="movie-name">${movieData[i].Title} ${movieData[i].Year} </h3>
      <p class="movie-text">Genre: ${movieData[i].Genre}</p>
      <p class="movie-text">Director: ${movieData[i].Director}</p>
      <p class="movie-text">Runtime: ${movieData[i].Runtime}</p>
@@ -32,10 +32,11 @@ const movieCards = document.getElementById("cards-container")
   const showGallerySuggest = (data) => {
     cardGallerySuggest +=
     //onclick="showModal(${data[i].id})"
-    `<div class="movie-card" style="width: 210px; height: 400px;" data-toggle="modal">
+    `<div class="movie-card" style="width: 280px; height: 450px;" data-toggle="modal">
+    <div><button class="movie-ratting"> ${data.imdbRating}</button></div>
     <img class="movie-card img"src=${data.Poster} alt="Card image cap">
     <div clas="movie-body">
-    <h3 class="movie-name">${data.Title} ${data.Year}</h3>
+    <h3 class="movie-name">${data.Title} ${data.Year} </h3>
     <p class="movie-text">Genre: ${data.Genre}</p>
     <p class="movie-text">Director: ${data.Director}</p>
     <p class="movie-text">Runtime: ${data.Runtime}</p>
@@ -47,10 +48,11 @@ const movieCards = document.getElementById("cards-container")
 const showGallerySearch = (data) => {
   cardGallery +=
   //onclick="showModal(${data[i].id})"
-  `<div class="movie-card" style="width: 210px; height: 400px;" data-toggle="modal">
-   <img class="movie-card img"src=${data.Poster} alt="Card image cap">
+  `<div class="movie-card" style="width: 280px; height: 450px;" data-toggle="modal">
+  <div><button class="movie-ratting"> ${data.imdbRating}</button></div>
+  <img class="movie-card img"src=${data.Poster} alt="Card image cap">
    <div clas="movie-body">
-   <h3 class="movie-name">${data.Title} ${data.Year}</h3>
+   <h3 class="movie-name">${data.Title} ${data.Year} </h3>
    <p class="movie-text">Genre: ${data.Genre}</p>
    <p class="movie-text">Director: ${data.Director}</p>
    <p class="movie-text">Runtime: ${data.Runtime}</p>
