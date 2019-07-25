@@ -97,8 +97,8 @@ nav {
     font-size: 25px;
     font-family: "Fira Sans", sans-serif;
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    width: 299px;
-    height: 50px;
+    width: 400px;
+    height: 60px;
     margin: 30px;
 }
 
@@ -135,12 +135,12 @@ nav {
 
 /*Imagen cabezera----------------------*/
 .main-bg {
-    height: 400px;
+    height: 500px;
     margin: 0px;
     background-image: url(images/header.jpg);
     background-repeat: no-repeat;
     background-position: right top;
-    background-size:75%;
+    background-size:85%;
     background-color:rgb(255, 255, 255);
     display: flex;
     align-items: center;
@@ -153,7 +153,7 @@ nav {
 }
 /*Suggestions*/
 .questions-bg {
-    height: 400px;
+    height: 500px;
     margin: 0px;
     background-size:75%;
     background-color:#C8C8C8;
@@ -163,12 +163,19 @@ nav {
 
 .cards-suggestions {
     background: #C8C8C8;
-    padding: 20px;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0;
+}
+.suggestion{
+    padding: 30px;
+}
+.cardsFeelings{
+    display: flex;
+
+justify-content: flex-end;
 }
 /*Options*/
 .options-web {
@@ -295,7 +302,7 @@ select option {
 }
 
 .movie-card{
-    border: #484848 3px solid;
+    /* border: #484848 3px solid; */
     border-radius: 10px;
     padding: 20px;
     height: 250px;
@@ -309,7 +316,7 @@ select option {
 
 .movie-card:hover {
     background: #fff;
-    border: #01285A 3px solid;
+    /* border: #01285A 3px solid; */
     box-shadow: 0 14px 28px #333333, 0 10px 10px #01285A;
 
 }
@@ -333,7 +340,7 @@ select option {
 }
 
 .movie-text{
-    font-size: 12px;
+    font-size: 10px;
     color:#333333;
 }
 
@@ -497,7 +504,7 @@ footer {
 
 
 /* MODAL --------------------*/
-/* .modal {
+.modal {
     position: fixed;
     display: none;
     left: 0;
@@ -555,13 +562,13 @@ footer {
   .modal .close_modal:hover {
     opacity: 0.9;
   }
-/* #modal {
+#modal {
     background: #01579b;
     display: flex;
     justify-content: center;
-} */
+}
 
-/* .modal-container {
+.modal-container {
     max-width: 600px;
     background: white;
     border-radius: 10px;
@@ -576,115 +583,7 @@ footer {
     align-items: center;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-}
-.name-title p {
-    font-size: 20px;
-}
-.fa {
-    margin-right: 5px;
-    margin-left: 5px;
-}
-.modal-info {
-    padding: 30px 50px 20px 50px;
-    display: flex;
-    justify-content: center;
-}
-.main-info {
-    padding-left: 20px;
-}
-.info-content {
-    display: flex;
-}
-.info-content img {
-    width: 140px;
-    padding: 20px;
-}
-.poke-title {
-    font-size: 15px;
-    font-weight: 400;
-    margin-bottom: 10px;
-}
-.gray-text {
-    color: #8B8B8B;
-}
-.gray-text p {
-    margin-bottom: 10px;
-}
-.text-data {
-    display: flex;
-    justify-content: center;
-}
-#poke-detail p{
-    margin-left: 20px;
-    margin-bottom: 10px;
-}
-.other-info {
-    padding: 0 20px 20px;
-}
-.other-info p{
-    font-size: 10px;
-}
-#other-detail p{
-    margin-bottom: 10px;
-    margin-left: 20px;
-}
-#other-detail-two p{
-    margin-bottom: 10px;
-    margin-left: 20px;
-}
-
-.data-column{
-    margin: 0 20px 0;
-    display: flex;
-}
-.evolutions {
-    display: flex;
-    justify-content: center;
-}
-.evolution-cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.center-text{
-    text-align: center;
-}
-.evo-card {
-    margin-bottom: 20px;
-}
-.evo-image {
-    background: #F8F8F8;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 10px;
-}
-.evo-image img{
-    width: 100px;
-}
-li.weakness-list {
-    padding: 5px;
-    list-style: none;
-    margin-bottom: 4px;
-    color: #ffffff;
-    font-family: "Fira Sans", sans-serif;
-  }
-li.type-list {
-    display: inline;
-    padding: 5px;
-    color: #ffffff;
-    font-family: "Fira Sans", sans-serif;
-  }
-#type-list {
-    margin-bottom: 10px;
-    margin-left: 20px;
-}
-#weaknessList{
-    margin-bottom: 10px;
-    margin-left: 20px;
-    display: flex;
-    flex-wrap: wrap;
-} */ 
-
+} 
 
 /* RESPONSIVE -------------------------*/
 

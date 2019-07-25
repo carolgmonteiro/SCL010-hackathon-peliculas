@@ -6,6 +6,7 @@ let searchMovie;
 let orderValue;
 // //VARIABLE PARA IMPRIMIR LOS CARDS
 let cardGallery = "";
+let cardGallerySuggest = "";
 const movieResult = document.getElementById("cards-container");
 const movieSuggestion = document.getElementById("cardsSuggestions");
 const suggestionResult = document.getElementById("cardsSuggest");
@@ -16,38 +17,37 @@ const movieCards = document.getElementById("cards-container")
   for (let i = 0; i < movieData.length; i++){
     cardGallery +=
     //onclick="showModal(${data[i].id})"
-     `<div class="movie-card" style="width: 210px; height: 420px;" data-toggle="modal">
+     `<div class="movie-card" style="width: 210px; height: 400px;" data-toggle="modal">
      <img class="movie-card img" src=${movieData[i].Poster} alt="Card image cap">
      <h3 class="movie-name">${movieData[i].Title} ${movieData[i].Year}</h3>
      <div class="movie-body">
      <p class="movie-text">Genre: ${movieData[i].Genre}</p>
-     <p class="movie-text">Runtime: ${movieData[i].Runtime}</p>
      <p class="movie-text">Director: ${movieData[i].Director}</p>
+     <p class="movie-text">Runtime: ${movieData[i].Runtime}</p>
      </div>
      </div>`
     } movieCards.innerHTML = cardGallery;
   };
 
   const showGallerySuggest = (data) => {
-    cardGallery +=
+    cardGallerySuggest +=
     //onclick="showModal(${data[i].id})"
-    `<div class="movie-card" style="width: 220px; height: 430px;" data-toggle="modal">
+    `<div class="movie-card" style="width: 210px; height: 400px;" data-toggle="modal">
     <img class="movie-card img"src=${data.Poster} alt="Card image cap">
     <div clas="movie-body">
     <h3 class="movie-name">${data.Title} ${data.Year}</h3>
     <p class="movie-text">Genre: ${data.Genre}</p>
     <p class="movie-text">Director: ${data.Director}</p>
     <p class="movie-text">Runtime: ${data.Runtime}</p>
-    <p class="movie-text">Actors: ${data.Actors}hrs</p>
     </div>
     </div>`;
-    suggestionResult.innerHTML = cardGallery;
+    suggestionResult.innerHTML = cardGallerySuggest;
   };
 //FUNCION PARA IMPRIMIR DESDE BUSCAR
 const showGallerySearch = (data) => {
   cardGallery +=
   //onclick="showModal(${data[i].id})"
-  `<div class="movie-card" style="width: 220px; height: 430px;" data-toggle="modal">
+  `<div class="movie-card" style="width: 210px; height: 400px;" data-toggle="modal">
    <img class="movie-card img"src=${data.Poster} alt="Card image cap">
    <div clas="movie-body">
    <h3 class="movie-name">${data.Title} ${data.Year}</h3>
@@ -120,8 +120,8 @@ document.getElementById("hurry-btn").addEventListener ("click", ( ) => {
   arrayMoviesByTime = returnMoviesByTime(arrayMoviesByGenre);
   showDataMoviesByTime(arrayMoviesByTime);
   document.getElementById("time").style.display = "none";
-  document.getElementById("cardsSuggestions").style.display = "block";
-  document.getElementById("cardsSuggest").style.display = "block";
+  document.getElementById("cardsSuggestions").style.display = "flex";
+  document.getElementById("cardsSuggest").style.display = "flex";
 });
 //OK para suggestion
 document.getElementById("ok-btn").addEventListener ("click", ( ) => {
@@ -130,8 +130,8 @@ document.getElementById("ok-btn").addEventListener ("click", ( ) => {
   arrayMoviesByTime = returnMoviesByTime(arrayMoviesByGenre);
   showDataMoviesByTime(arrayMoviesByTime);
   document.getElementById("time").style.display = "none";
-  document.getElementById("cardsSuggestions").style.display = "block";
-  document.getElementById("cardsSuggest").style.display = "block";
+  document.getElementById("cardsSuggestions").style.display = "flex";
+  document.getElementById("cardsSuggest").style.display = "flex";
 });
 //OK para suggestion
 document.getElementById("relaxed-btn").addEventListener ("click", ( ) => {
@@ -140,8 +140,8 @@ document.getElementById("relaxed-btn").addEventListener ("click", ( ) => {
   arrayMoviesByTime = returnMoviesByTime(arrayMoviesByGenre);
   showDataMoviesByTime(arrayMoviesByTime);
   document.getElementById("time").style.display = "none";
-  document.getElementById("cardsSuggestions").style.display = "block";
-  document.getElementById("cardsSuggest").style.display = "block";
+  document.getElementById("cardsSuggestions").style.display = "flex";
+  document.getElementById("cardsSuggest").style.display = "flex";
 });
 let returnMoviesByGenre = ()=> {
   let arrayGenres = [];//guardo aquí las pelis del genero escogido
@@ -156,20 +156,24 @@ let returnMoviesByGenre = ()=> {
   }
   return arrayGenres;
 }
-//arrayMoviesByGenre = returnMoviesByGenre();
 
 let returnMoviesByTime = (arrayMovies)=> {
   let arrayTime = [];
 
   for(let i=0; i<arrayMovies.length; i++) {
     let runtimeMovie = arrayMovies[i].Runtime;
-    runtimeMovie = runtimeMovie.substring(0, arrayMovies[i].Runtime.length-4);
+    let obtainNumberOfRuntime = runtimeMovie.split(" ");//"103 min" => ["103", "min"]
+    runtimeMovie = obtainNumberOfRuntime[0];
     let numberRuntimeMovie = parseInt(runtimeMovie);//numero de minutos de la película
-    if (!(timeOption.localeCompare("hurry-btn")) ) {
+
+    let comparacionHurry = timeOption == "hurry-btn";
+    let comparacionOk = timeOption == "ok-btn";
+
+    if (comparacionHurry) {
       if (numberRuntimeMovie < 120) {
         arrayTime.push(arrayMovies[i]);
       }
-    } else if (!(timeOption.localeCompare("ok-btn")) ) {
+    } else if (comparacionOk) {
       if (numberRuntimeMovie >= 120 && numberRuntimeMovie < 130) {
         arrayTime.push(arrayMovies[i]);
       }
@@ -178,7 +182,6 @@ let returnMoviesByTime = (arrayMovies)=> {
         arrayTime.push(arrayMovies[i]);
       }
     }
-
   }
   return arrayTime;
 }
