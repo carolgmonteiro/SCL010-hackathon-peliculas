@@ -37,6 +37,7 @@ h4, h5, h6{
     margin-bottom: 10px;
     text-align: unset;
     padding: 70px;
+    font-family:  'Merriweather', serif;;
 }
 
 p {
@@ -154,9 +155,8 @@ nav {
 .questions-bg {
     height: 400px;
     margin: 0px;
-    background-image: url(images/header2.jpg);
     background-size:75%;
-    background-color:rgb(255, 255, 255);
+    background-color:#C8C8C8;
     display: flex;
     align-items: center;
 }
